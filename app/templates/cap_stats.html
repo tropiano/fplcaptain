@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}          
+<div class="container-fluid">  
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12"> 
+    <img src="{{ url_for('static', filename='images/fpl_cap_info_{}.png'.format(team_id)) }}">
+    </div>
+  </div>
+</div>
+{% endblock %}

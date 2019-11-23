@@ -1,0 +1,93 @@
+#banner {
+  text-align: center;
+  color: #7c809b;
+  background-color: #a1cdf4;
+  padding: 0px 0px 0px 0px;
+  height: 500px;
+}
+
+#banner h1 {
+  padding: 70px 0px 10px 0px;
+  font-size: 60px;
+  color: #191d32;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#banner p {
+  padding: 1px;
+  font-size: 28px;
+}
+
+#footer {
+  text-align: center;
+}
+
+#footer p {
+  text-align: center;
+  font-size: 30px;
+}
+
+.form-control.form-control-lg {
+  height: 50px;
+  padding: 6px 12px;
+  font-size: 20px;
+  color: #191d32;
+}
+
+.btn.btn-primary {
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  font-size: 30px;
+  background-color: #c1aba6;
+  color: #342a21;
+  border: none;
+}
+
+#league {
+  text-align: center;
+  color: #191d32;
+}
+
+#user {
+  text-align: center;
+  color: #7c809b;
+}
+
+.well {
+  background: white;
+}
+
+#amount {
+  color: #c0392b;
+}
+
+.well#table {
+  font-size: 20px;
+  color: #191d32;
+  border: 5px solid black;
+  border-radius: 0px;
+}
+
+.well#stats {
+  font-size: 15px;
+  text-align: center;
+  color: #191d32;
+}
+
+.flash-error {
+  background: #e74c3c;
+  padding: 0.5em;
+  border: 1px solid #aacbe2;
+  text-align: center;
+  font-size: 25px;
+}
+
+.flash-info {
+  background: #58d68d;
+  padding: 0.5em;
+  border: 1px solid #aacbe2;
+  text-align: center;
+  font-size: 25px;
+}
