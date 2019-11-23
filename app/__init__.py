@@ -75,7 +75,6 @@ def calculate_stats(team_id):
     for s in stats_all:
         cap_stat = {}
         stats = s["stats"]
-        # print(stats)
         for ss in stats:
             if ss["multiplier"] == 2:
                 cap_stat["id"] = ss["element"]
@@ -242,6 +241,12 @@ def show_infographic():
 
 @app.route('/cap_stats/<team_id>')
 def captain_info(team_id):
+
+    filename = os.path.join(app.root_path, 'static',
+                            'images/fpl_cap_info_{}.png'.format(team_id))
+
+    if os.path.exists(filename):
+        return render_template('cap_stats.html', team_id=team_id)
 
     try:
         captain_stats = calculate_stats(team_id)
