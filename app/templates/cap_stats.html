@@ -1,9 +1,36 @@
 {% extends "layout.html" %}
-{% block body %}          
-<div class="container-fluid">  
+{% block body %}
+<div class="container-fluid">
+  <br>
   <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12"> 
-    <img src="{{ url_for('static', filename='images/fpl_cap_info_{}.png'.format(team_id)) }}">
+    <div class="col-xs-2 col-sm-2 col-md-2">
+      <div class="card">
+        <a href="https://www.alfadata.xyz/">
+          <div class="card-body text-center">
+            <img src="{{ url_for('static', filename='images/alfadata.png') }}" class="infograph">
+            <br>
+            Machine Learning for football betting
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-8 col-sm-8 col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <img src="{{ url_for('static', filename='images/fpl_cap_info_{}.png'.format(team_id)) }}" class="infograph">
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2">
+      <div class="card">
+        <a href="https://www.alfadata.xyz/">
+          <div class="card-body text-center">
+            <img src="{{ url_for('static', filename='images/vaultasy_logo.png') }}" class="infograph">
+            <br>
+            Your Vault for Fantasy Premier League
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>

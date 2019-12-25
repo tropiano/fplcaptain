@@ -1,28 +1,28 @@
 {% extends "layout.html" %}
-{% block body %}          
-<div class="container-fluid">  
+{% block body %}
+<div class="container-fluid" id="banner">
   <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12"> 
-    <div id='banner'>
+    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
       <h1><b>FPL Captain</b></h1>
       <br>
-       <p>Find out how screwed up are your captain choices</p>
+      <p>Find out how screwed up are your captain choices</p>
       <br>
-       <h3>Type your Team Id to find out</h3>
-      <div class="col-xs-5"></div>
-      <div class="col-xs-2">
+      <h3>Type your Team Id to find out</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4 col-sm-4 col-md-4 text-center">
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 text-center">
       <form method="POST">
-        <div class="form-group"> 
+        <div class="form-group">
           <input name="teamid" type="text" class="form-control form-control-lg" id="teamid-input" placeholder="Team Id">
         </div>
         <button type="submit" class="btn btn-primary">Find out!</button>
       </form>
-        </div>
-        <div class="col-xs-5"></div>      
-        </div>
-        </div>
-     </div>
     </div>
+    <div class="col-xs-4 col-sm-4 col-md-4"></div>
   </div>
+</div>
 </div>
 {% endblock %}

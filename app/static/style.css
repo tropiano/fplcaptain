@@ -6,6 +6,21 @@
   height: 500px;
 }
 
+.infograph {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 #banner h1 {
   padding: 70px 0px 10px 0px;
   font-size: 60px;
