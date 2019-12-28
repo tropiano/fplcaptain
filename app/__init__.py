@@ -217,7 +217,7 @@ def create_graphic(all_stats):
     draw.text((730, 60), user_name, fill=color_blue, font=font_small)
 
     (x, y) = (650, 430)
-    message = "by @ItaliaFpl"
+    message = "by @alfa_data"
     draw.text((x, y), message, fill=color_blue, font=font_small)
 
     img.save(filename)
@@ -244,9 +244,6 @@ def captain_info(team_id):
 
     filename = os.path.join(app.root_path, 'static',
                             'images/fpl_cap_info_{}.png'.format(team_id))
-
-    if os.path.exists(filename):
-        return render_template('cap_stats.html', team_id=team_id)
 
     try:
         captain_stats = calculate_stats(team_id)
