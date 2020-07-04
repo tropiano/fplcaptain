@@ -29,6 +29,7 @@ def calculate_stats(team_id):
     entry = r.json()
 
     team_name = entry["name"]
+    
     user_name = entry["player_first_name"] + " " + entry["player_last_name"]
     total_points = entry["summary_overall_points"]
 
@@ -36,12 +37,10 @@ def calculate_stats(team_id):
     jsonResponse = r.json()
     elements = jsonResponse['elements']
     stats = jsonResponse['element_stats']
-    players = jsonResponse['total_players']
-
+    
     players = []
     for e in elements:
         player = {}
-
         player['name'] = e['web_name']
         player['assists'] = e['assists']
         player['goals_scored'] = e['goals_scored']
@@ -55,6 +54,7 @@ def calculate_stats(team_id):
     player_id_name = {}
     for p in players:
         player_id_name[p["id"]] = p["name"]
+
 
     stats_all = []
 
@@ -101,9 +101,11 @@ def calculate_stats(team_id):
                 break
         full_captain_stats.append(full_stat)
 
+    
     cap_points = []
+    full_captain_stats_clean = [f for f in full_captain_stats if "name" in f]
     full_captain_stats_sort = sorted(
-        full_captain_stats, key=lambda x: x["name"])
+        full_captain_stats_clean, key=lambda x: x["name"])
     for key, group in itertools.groupby(full_captain_stats_sort, key=lambda x: x["name"]):
         cap_points.append((key, sum((x["points"] for x in list(group)))))
 
@@ -217,7 +219,7 @@ def create_graphic(all_stats):
     draw.text((730, 60), user_name, fill=color_blue, font=font_small)
 
     (x, y) = (650, 430)
-    message = "by @alfa_data"
+    message = "by @alfa_data    "
     draw.text((x, y), message, fill=color_blue, font=font_small)
 
     img.save(filename)
